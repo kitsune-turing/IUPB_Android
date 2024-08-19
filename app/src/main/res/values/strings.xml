@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EasyAuth</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_sing_in">Sing In</string>
+    <string name="account">Enter your account</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="or">OR</string>
+</resources>
