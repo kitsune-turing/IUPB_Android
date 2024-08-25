@@ -4,46 +4,62 @@ package com.kitsune.android.u.auth;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.InputType;
+import android.text.method.PasswordTransformationMethod;
+import android.text.method.SingleLineTransformationMethod;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.kitsune.android.u.auth.Model.User;
 
 
 public class Login extends Activity {
+    private EditText usernameEditText;
+    private EditText passwordEditText;
+    private ImageView togglePasswordButton;
+    private TextView loginButton;
+    private TextView registerButton;
+    private boolean isPasswordVisible = false;
 
-    private boolean password_show = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final EditText USER = findViewById(R.id.username);
-        final EditText PASS = findViewById(R.id.password);
-        final ImageView BTN_PASS = findViewById(R.id.btnPassIcon);
-        final TextView BTN_LOGIN = findViewById(R.id.btnSingIn);
-        final TextView BTN_REGSITER = findViewById(R.id.btnSingUp);
+        // Init components
+        usernameEditText = findViewById(R.id.edit_username);
+        passwordEditText = findViewById(R.id.edit_password);
+        togglePasswordButton = findViewById(R.id.btn_password_toggle);
+        loginButton = findViewById(R.id.btn_sign_in);
+        registerButton = findViewById(R.id.btn_sign_up);
 
-        BTN_LOGIN.setOnClickListener(v -> dataForm());
-        BTN_REGSITER.setOnClickListener(view -> startActivity(new Intent(Login.this, Register.class)));
-
-        BTN_PASS.setOnClickListener(view -> {
-            if(password_show) {
-                password_show = false;
-                PASS.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                BTN_PASS.setImageResource(R.drawable.password_open);
-            }else {
-                password_show = true;
-                PASS.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-                BTN_PASS.setImageResource(R.drawable.password_close);
-            }
-
-            PASS.setSelection(PASS.length());
+        // Listeners configurations
+        loginButton.setOnClickListener(v ->
+        {
+            User user = new User(this);
+            user.verifyCredentials(usernameEditText.getText().toString(),
+                    passwordEditText.getText().toString());
         });
+
+        registerButton.setOnClickListener(view -> startActivity(new Intent(Login.this, Register.class)));
+        togglePasswordButton.setOnClickListener(view -> togglePasswordVisibility());
     }
 
-    private void dataForm(){
+    private void submitLoginForm() {
 
+
+    }
+
+    private void togglePasswordVisibility() {
+        if (isPasswordVisible) {
+            isPasswordVisible = false;
+            passwordEditText.setTransformationMethod(new PasswordTransformationMethod());
+            togglePasswordButton.setImageResource(R.drawable.password_open);
+        } else {
+            isPasswordVisible = true;
+            passwordEditText.setTransformationMethod(new SingleLineTransformationMethod());
+            togglePasswordButton.setImageResource(R.drawable.password_close);
+        }
+        passwordEditText.setSelection(passwordEditText.length());
     }
 }
