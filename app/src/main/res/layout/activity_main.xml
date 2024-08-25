@@ -2,113 +2,121 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/layout_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Login"
     android:gravity="center"
-    android:background="#F0EBD8">
+    android:background="@color/eggshell"
+    tools:context=".Login">
 
     <TextView
+        android:id="@+id/text_login_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/title_sing_in"
+        android:text="@string/title_sign_in"
         android:textSize="40sp"
         android:textStyle="bold"
         android:textColor="@color/rich_black"/>
 
     <TextView
+        android:id="@+id/text_account_prompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/account"
+        android:text="@string/account_prompt"
         android:textSize="10sp"
         android:layout_marginTop="5dp"
-        tools:ignore="SmallSp"
-        android:textColor="@color/prussian_blue"/>
+        android:textColor="@color/prussian_blue"
+        tools:ignore="SmallSp"/>
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/edit_username"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="@drawable/round_black"
-        android:hint="@string/username"
-        android:maxLines="1"
-        android:inputType="text"
-        android:textSize="16sp"
-        android:textColor="#F0EBD8"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="40dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@drawable/rounded_input"
+        android:hint="@string/hint_username"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textSize="16sp"
+        android:textColor="@color/eggshell"
         android:importantForAccessibility="yes"
         android:autofillHints="username"/>
 
     <RelativeLayout
+        android:id="@+id/layout_password"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/round_black">
+        android:background="@drawable/rounded_input">
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/edit_password"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@android:color/transparent"
-            android:hint="@string/password"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:maxLines="1"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:textSize="16sp"
-            android:textColor="#F0EBD8"
-            android:inputType="textPassword"
-            android:maxLines="1"
+            android:textColor="@color/eggshell"
             android:importantForAccessibility="yes"
             android:autofillHints="password"/>
 
         <ImageView
-            android:id="@+id/btnPassIcon"
+            android:id="@+id/btn_password_toggle"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
             android:padding="10dp"
             android:adjustViewBounds="true"
-            android:layout_marginEnd="20dp"
             android:src="@drawable/password_close"
             android:contentDescription="@string/show_password_icon"/>
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/text_forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:text="@string/forgot_password"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
+        android:text="@string/forgot_password"
         android:textSize="10sp"
         android:textColor="@color/prussian_blue"
-        tools:ignore="SmallSp" />
+        tools:ignore="SmallSp"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnSingIn"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginEnd="20dp"
+        android:id="@+id/btn_sign_in"
+        android:layout_width="143dp"
+        android:layout_height="45dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/title_sign_in"
         android:textAllCaps="false"
-        android:layout_marginTop="40dp"
-        android:background="@color/rich_black"
-        android:text="@string/title_sing_in"
-        android:textColor="#F0EBD8"
-        android:textSize="30sp"
-        android:gravity="center"/>
+        android:textColor="@color/eggshell"
+        android:textSize="20sp" />
+
 
     <RelativeLayout
+        android:id="@+id/layout_or_separator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -116,78 +124,81 @@
         android:layout_marginEnd="20dp">
 
         <View
-            android:layout_centerVertical="true"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#1A000000"
-            android:layout_toStartOf="@+id/orTxt"
-            android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp"/>
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/text_or"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
 
         <TextView
-            android:id="@+id/orTxt"
+            android:id="@+id/text_or"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/or"
-            android:textSize="12sp"
             android:layout_centerInParent="true"
+            android:text="@string/or_separator"
+            android:textSize="12sp"
             android:textColor="@color/payme_gray"/>
 
         <View
-            android:layout_centerVertical="true"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#1A000000"
-            android:layout_toEndOf="@+id/orTxt"
-            android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp"/>
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/text_or"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:id="@+id/layout_google_sign_in"
+        android:layout_width="280dp"
         android:layout_height="55dp"
-        android:background="@color/rich_black"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp">
+        android:background="@color/rich_black">
 
         <ImageView
+            android:id="@+id/icon_google"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_centerVertical="true"
             android:layout_marginStart="20dp"
             android:adjustViewBounds="true"
-            android:src="@drawable/google_icon"
-            android:contentDescription="@drawable/google_icon"/>
+            android:contentDescription="@string/google_icon_desc"
+            android:src="@drawable/google_icon" />
 
         <TextView
+            android:id="@+id/text_google_sign_in"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/sing_in_with_google"
+            android:text="@string/sign_in_with_google"
             android:textColor="@color/eggshell"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/layout_register_prompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginTop="40dp">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/don_t_have_an_account"/>
-
+        android:layout_marginTop="20dp">
 
         <TextView
-            android:id="@+id/btnSingUp"
+            android:id="@+id/text_no_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sing_up"
+            android:text="@string/prompt_no_account"/>
+
+        <TextView
+            android:id="@+id/btn_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
             android:textColor="@color/payme_gray"
             android:textStyle="bold"/>
     </LinearLayout>
