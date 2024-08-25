@@ -8,6 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <!-- The principals colors for aplication -->
     <color name="rich_black">#0D1321</color>
     <color name="payme_gray">#3E5C76</color>
+    <color name="prussian_blue">#1D2D44</color>
+    <color name="eggshell">#F0EBD8</color>
 </resources>

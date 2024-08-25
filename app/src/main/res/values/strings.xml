@@ -7,4 +7,16 @@
     <string name="password">Password</string>
     <string name="forgot_password">Forgot password</string>
     <string name="or">OR</string>
+    <string name="sing_in_with_google">Sing in with Google</string>
+    <string name="don_t_have_an_account">Don\'t have an account</string>
+    <string name="sing_up">Sing up</string>
+    <string name="show_password_icon">Show password</string>
+    <string name="title_activity_register">Register</string>
+    <string name="tittle_account">Create new account</string>
+    <string name="name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="alredy_have_an_account">Alredy have an account</string>
+    <string name="sing_in">Sing In</string>
 </resources>
