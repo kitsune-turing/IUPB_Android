@@ -1,17 +1,20 @@
 package com.kitsune.android.u.auth.Model;
 
+
+import android.content.Context;
 import com.kitsune.android.u.auth.Configuration.DataBase;
+
 
 public class User {
     private String email;
-    private String password;
+    private String pass;
     private DataBase db;
 
-    public User() {
-        this.db = new DataBase();
+    public User(Context context) {
+        this.db = new DataBase(context);
     }
 
-    public boolean verifyCredentials(String email, String password) {
-        return db.verifyUser(email, password);
+    public void verifyCredentials(String email, String password) {
+        db.verifyUser(email, password);
     }
 }
