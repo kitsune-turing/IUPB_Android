@@ -32,4 +32,6 @@
 
     <!-- Activity title -->
     <string name="title_activity_register">Register</string>
+    <string name="confirmation_message">Confirmation message</string>
+    <string name="accept">Accept\n</string>
 </resources>
