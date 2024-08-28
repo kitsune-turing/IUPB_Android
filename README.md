@@ -55,18 +55,16 @@ If cloning the repository is not possible, you can download the initial delivery
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request on GitHub. Follow the standard Git workflow and ensure code quality and documentation.
 
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Contact
-
-For questions or feedback, please contact us at your-email@example.com.
+For questions or feedback, please contact us at anderson.gomez645@pascualbravo.edu.co
 
 ---
 
 ### Notes:
-- Make sure to replace `tobongoomez809@gmail.com` with your actual email address.
+- Make sure to replace `anderson.gomez645@pascualbravo.edu.co` with your actual email address.
 - Review and adjust any other contact information as needed.
