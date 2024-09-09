@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@color/eggshell"
-    tools:context=".Login">
+    tools:context=".LoginActivity">
 
     <TextView
         android:id="@+id/text_login_title"
