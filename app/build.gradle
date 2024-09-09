@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -64,4 +65,16 @@ dependencies {
     androidTestImplementation libs.ui.test.junit4
     debugImplementation libs.ui.tooling
     debugImplementation libs.ui.test.manifest
+
+    // Importa el BoM de Firebase
+    implementation platform('com.google.firebase:firebase-bom:33.2.0')
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+
+    // Agrega las dependencias para los productos de Firebase que deseas usar
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth:23.0.0'
+    implementation 'com.google.android.gms:play-services-auth:21.2.0'
+    implementation 'com.google.firebase:firebase-database:20.0.5'
 }
+
+apply plugin: 'com.google.gms.google-services'

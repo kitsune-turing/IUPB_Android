@@ -1,5 +1,6 @@
 package com.kitsune.android.u.auth;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +9,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.kitsune.android.u.auth.Model.User;
 import com.kitsune.android.u.auth.utils.PasswordUtils;
 import com.kitsune.android.u.auth.utils.ValidationUtils;
@@ -20,6 +20,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import androidx.annotation.NonNull;
+
 
 public class RegisterActivity extends Activity {
     private EditText fullNameEditText, emailEditText, phoneEditText, passwordEditText, passwordConfirmEditText;
