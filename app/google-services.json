@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1049891894501",
+    "project_id": "kitsune-app-developer",
+    "storage_bucket": "kitsune-app-developer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049891894501:android:b971a79d4b951cdb64900c",
+        "android_client_info": {
+          "package_name": "com.kitsune.android.u.auth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaOMbo5rjKQiyPQi8ZPHuSvelDC0ZABAs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
