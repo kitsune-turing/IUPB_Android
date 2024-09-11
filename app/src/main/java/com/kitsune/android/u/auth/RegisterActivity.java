@@ -2,7 +2,6 @@ package com.kitsune.android.u.auth;
 
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
@@ -10,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.kitsune.android.u.auth.Model.User;
+import com.kitsune.android.u.auth.utils.IntentUtils;
 import com.kitsune.android.u.auth.utils.PasswordUtils;
 import com.kitsune.android.u.auth.utils.ValidationUtils;
 import com.google.firebase.auth.FirebaseAuth;
@@ -53,7 +53,7 @@ public class RegisterActivity extends Activity {
         toggleConfirmPasswordButton = findViewById(R.id.btn_confirm_password_toggle);
         TextView loginButton = findViewById(R.id.btn_sign_in_prompt);
 
-        loginButton.setOnClickListener(view -> startActivity(new Intent(RegisterActivity.this, LoginActivity.class)));
+        loginButton.setOnClickListener(view -> IntentUtils.navigateTo(RegisterActivity.this, LoginActivity.class));
     }
 
     private void setUIListeners() {
@@ -113,7 +113,6 @@ public class RegisterActivity extends Activity {
 
     private void storeUserDataInRealtimeDatabase(FirebaseUser user, String fullName, String phone) {
         DatabaseReference userRef = database.getReference("users").child(user.getUid());
-
         User newUser = new User(user.getUid(), fullName, user.getEmail(), phone);
 
         // Storing user data in the 'users' node with the user ID as the child node
@@ -122,8 +121,9 @@ public class RegisterActivity extends Activity {
                 .addOnFailureListener(e -> Log.e(TAG, "Error storing user data", e));
     }
 
+
     private void navigateToLogin() {
-        startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+        IntentUtils.navigateTo(RegisterActivity.this, LoginActivity.class);
         finish();
     }
 }
