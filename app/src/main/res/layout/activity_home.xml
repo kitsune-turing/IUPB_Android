@@ -1,25 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:gravity="center"
+    android:background="@color/eggshell"
+    tools:context=".HomeActivity">
 
     <TextView
-        android:id="@+id/text_full_name"
+        android:id="@+id/hola_bienve"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Full Name: " />
+        android:layout_gravity="center"
+        android:alpha="0.5"
+        android:gravity="center"
+        android:text="@string/hola_bienve"
+        android:textAppearance="@style/hola_bienve" />
 
     <TextView
         android:id="@+id/text_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email: " />
+        android:layout_marginTop="20dp"
+        android:text="Email: "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/text_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Phone: " />
+        android:layout_marginTop="10dp"
+        android:text="Phone: "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_gravity="center" />
+
+
+    <RelativeLayout
+        android:id="@+id/layout_google_sign_in"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="600dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_button">
+
+    <TextView
+        android:id="@+id/text_google_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/Close"
+        android:textColor="@color/eggshell"
+        android:textStyle="bold" />
+    </RelativeLayout>
 </LinearLayout>

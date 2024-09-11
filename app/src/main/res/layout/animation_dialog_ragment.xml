@@ -9,7 +9,7 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie_animation_view"
-        android:layout_width="376dp"
-        android:layout_height="617dp"
+        android:layout_width="380dp"
+        android:layout_height="600dp"
         app:lottie_fileName="login_animation.json" />
 </LinearLayout>
