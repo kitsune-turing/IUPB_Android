@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.kitsune.android.u.auth.utils.PasswordUtils;
 
 
@@ -81,7 +80,6 @@ public class LoginActivity extends Activity {
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
-                        FirebaseUser user = mAuth.getCurrentUser();
                         Log.d(TAG, "signInWithEmail:success");
                         navigateToHome();
                     } else {
