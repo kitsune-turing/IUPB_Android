@@ -31,7 +31,11 @@
     <string name="google_icon_desc">Google icon</string>
 
     <!-- Activity title -->
-    <string name="title_activity_register">Register</string>
+    <string name="title_activity_register"/>
     <string name="confirmation_message">Confirmation message</string>
     <string name="accept">Accept\n</string>
+    <string name="hola_bienve">Hello, Welcome to </string>
+    <string name="Close">Cloase app</string>
+    <string name="Home"/>
+    <string name="Animation" />
 </resources>
