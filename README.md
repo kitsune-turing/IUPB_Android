@@ -23,6 +23,10 @@ git clone -b first-delivery https://github.com/kitsune-turing/IUPB_Android.git
 
 If cloning the repository is not possible, you can download the initial delivery from the following link: [Download First Delivery (RAR)](https://drive.google.com/file/d/16U8JRTRILJmjkKZACWjZMXO7zt0kZK3z/view?usp=sharing)
 
+## Dowload Second Delivery
+
+The second delivery of the project can be downloaded from the following link: [Dowload Second Delivery (RAR)](https://drive.google.com/file/d/1GbGl5Xh65TBSuVHcsXj_Ic8YNw4noG8k/view?usp=drive_link)
+
 ## Set Up the Project
 
 1. **Open the Project**: Open Android Studio and import the project.
