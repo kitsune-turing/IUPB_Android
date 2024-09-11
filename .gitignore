@@ -42,9 +42,6 @@ render.experimental.xml
 *.jks
 *.keystore
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
-
 # Android Profiling
 *.hprof
 
@@ -310,7 +307,6 @@ proguard/
 # Keystore files
 
 # Google Services (e.g. APIs or Firebase)
-# google-services.json
 
 # Android Patch
 
@@ -526,7 +522,6 @@ _TeamCity*
 !.axoCover/settings.json
 
 # Coverlet is a free, cross platform Code Coverage Tool
-coverage*.json
 coverage*.xml
 coverage*.info
 
