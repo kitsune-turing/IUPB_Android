@@ -81,12 +81,10 @@ public class LoginActivity extends Activity {
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
-                        // Successful login, redirect to HomeActivity
                         FirebaseUser user = mAuth.getCurrentUser();
                         Log.d(TAG, "signInWithEmail:success");
                         navigateToHome();
                     } else {
-                        // Failed login, display error message
                         Log.w(TAG, "signInWithEmail:failure", task.getException());
                         showToast(ERROR_AUTH_FAILED);
                     }
