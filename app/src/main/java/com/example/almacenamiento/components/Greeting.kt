@@ -6,14 +6,21 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 
-private const val TAG = "Greeting"
-
+/**
+ * Composable function that displays a greeting message.
+ *
+ * @param name The name to include in the greeting message.
+ * @param modifier Optional modifier for styling the Text composable.
+ */
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Log.i(TAG, "Greeting llamado con nombre: $name")
+    Log.i("Greeting_Execution", "Greeting called with name: $name")
     Text(text = "Hello, $name!", modifier = modifier)
 }
 
+/**
+ * Preview function for the Greeting composable.
+ */
 @Preview(showBackground = true)
 @Composable
 fun PreviewGreeting() {
